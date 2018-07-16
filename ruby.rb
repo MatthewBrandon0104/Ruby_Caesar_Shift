@@ -4,6 +4,10 @@ def caesar(string, number)
     new_array = []
     
     array.each do |character|
+            if alpha.index(character) == nil
+                new_array.push(character)
+                next
+            end
             old_index = alpha.index(character)
             new_array.push(alpha[shift(old_index, number)])
     end
@@ -41,4 +45,4 @@ def shift(current, factor)
     return new_index
 end
 
-caesar("xyz", 1)
+caesar("abc!", 2)
