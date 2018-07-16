@@ -1,5 +1,5 @@
 def caesar(string, number)
-    alpha = "abcdefghijklmnopqrstuvwxyz".split("")
+    alpha = ("a".."z").to_a
     array = string.split("")
     new_array = []
     
@@ -9,6 +9,7 @@ def caesar(string, number)
                 character.downcase!
                 is_cap = true
             end
+        
             if alpha.index(character) == nil
                 new_array.push(character)
                 next
