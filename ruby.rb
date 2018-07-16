@@ -53,6 +53,5 @@ def shift(current, factor)
     return new_index
 end
 
-
-caesar("What a String!", 5)
-caesar("Bmfy f Xywnsl!", -5)
+caesar("What a String!", 145)
+caesar("Lwpi p Higxcv!", -145)
