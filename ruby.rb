@@ -11,7 +11,7 @@ def caesar(string, number)
             old_index = alpha.index(character)
             new_array.push(alpha[shift(old_index, number)])
     end
-puts new_array
+puts new_array.join("")
 end
 
 
@@ -45,4 +45,4 @@ def shift(current, factor)
     return new_index
 end
 
-caesar("abc!", 2)
+caesar("what a string!", 5)
