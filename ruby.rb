@@ -4,12 +4,20 @@ def caesar(string, number)
     new_array = []
     
     array.each do |character|
+            is_cap = false
+            if character == character.upcase
+                character = character.downcase
+                is_cap = true
+            end
             if alpha.index(character) == nil
                 new_array.push(character)
                 next
             end
             old_index = alpha.index(character)
             new_array.push(alpha[shift(old_index, number)])
+            if is_cap == true
+                new_array[-1] = new_array[-1].upcase
+            end
     end
 puts new_array.join("")
 end
@@ -45,5 +53,6 @@ def shift(current, factor)
     return new_index
 end
 
-caesar("what a string!", 5)
-caesar("bmfy f xywnsl!", -5)
+
+caesar("What a String!", 5)
+caesar("Bmfy f Xywnsl!", -5)
